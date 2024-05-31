@@ -8,7 +8,7 @@ class Category(models.Model):
 
 class Image(models.Model):
     title = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField()
     categories = models.ManyToManyField('Category')
     created_date = models.DateField(auto_now_add=True)
     age_limit = models.PositiveIntegerField()
